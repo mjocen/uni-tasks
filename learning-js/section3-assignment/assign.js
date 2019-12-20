@@ -42,3 +42,23 @@ function arr_criteria(arr, criteria) {
 function display_judgment() {
     console.log(arr_criteria(arr_nos,filt_even));
 }
+
+var dict = {
+    "errors": [
+      {
+        "code": "44005",
+        "name": "DUPLICATE_ARTICLE_ID_ERROR",
+        "message": "The merchant specified article_id of D4FZ00010178EXP00001 has been identified as a duplicate.  All article_id values submitted must be unique.  Please resubmit using a unique article_id for the item.",
+        "field": "",
+        "context": {
+          "article_id": "D4FZ00010178EXP00001"
+        }
+      }
+    ]}
+
+async function blah() {
+    var take;
+    for (const err_obj of dict.errors) {
+        console.log(err_obj.code + ": " + err_obj.name)
+    }
+}
